@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>React Hello World</title>
+</head>
+
+<body>
+
+  <div id="application-root"></div>
+
+  <script src="https://unpkg.com/react@16/umd/react.development.js">
+  </script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+  </script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js">
+  </script>
+  <script type="text/babel">
+    function App(props) {
+  return (
+    <main>
+    <header>
+      <h1>{props.studentName}'s Resume</h1>
+    </header>
+
+    <section>
+      <header>  
+        <h2>Contact Info:</h2>
+      </header>
+          <ul>
+            <li><address>Address:<a href="mailto:sallystudent@gmail.com">sallystudent@gmail.com</a></address></li>
+            <li><address>Number:(555)-999-1234</address></li>
+          </ul>
+    </section>
+
+    <section>
+       <img src="https://media.istockphoto.com/photos/confident-business-woman-in-office-with-group-picture-id530417408?k=6&m=530417408&s=612x612&w=0&h=x98QtlY1xRfhaGUdePZQVRISMFOVM8Qcso1ySuKKyXo=" alt="Picture of Sally" height="200"/>
+    </section>
+
+    <section>
+      <header>
+        <h2>Education</h2>
+        <p>Cameron University</p>
+        <p>April 2008 - April 2012</p>
+      </header>
+    </section>
+    
+    <section>
+      <header>
+        <h2>Employment History</h2>
+      </header>
+        <p>Company: Not So Techie Jobs</p>
+        <p>Title: Web Developer</p>
+        <p>Dates: April 2014-Present</p>
+        <p>Description: it's a job</p>
+
+        <p>Company: Techie Jobs</p>
+        <p>Title: Web Developer</p>
+        <p>Dates: April 2012-April 2014</p>
+        <p>Description: it's a job before the current job</p>
+    </section>
+    </main>
+    );
+}
+
+        ReactDOM.render(
+  <App studentName='Sally Student' />,
+  document.querySelector('#application-root')
+);
+    </script>
+
+
+
+</body>
+
+</html>
